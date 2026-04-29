@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1772611501417,
+      "tag": "0000_needy_tag",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1772615690395,
+      "tag": "0001_lucky_radioactive_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772615690396,
+      "tag": "0002_deep_analysis",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1775805365220,
+      "tag": "0003_calm_robin_chapel",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1775811854922,
+      "tag": "0004_known_green_goblin",
+      "breakpoints": true
+    }
+  ]
+}

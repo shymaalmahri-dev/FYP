@@ -1,0 +1,17 @@
+[Unit]
+Description=ELAI edge block agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=-/etc/elai/inference.env
+ExecStart=/bin/bash -lc 'PROJECT_HOME="${PROJECT_HOME:-/home/ubuntu/FYP}"; exec "$PROJECT_HOME/run_edge_block_agent.sh"'
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
