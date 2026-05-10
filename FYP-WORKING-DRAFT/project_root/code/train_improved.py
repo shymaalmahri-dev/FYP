@@ -9,8 +9,10 @@ from sklearn.utils import shuffle
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 
 # ── 1. LOAD AND SHUFFLE ──────────────────────────────────────
+#here we are using the csv file that we have created earlier using all different pcap files
 print("[*] Loading dataset...")
 df = pd.read_csv('training_data_iot.csv')
+#shuffle so that we don't make the AI baised based on order
 df = shuffle(df, random_state=42).reset_index(drop=True)
 print(f"[*] Total rows: {len(df)}")
 print(df['label'].value_counts())
