@@ -30,12 +30,12 @@ pcap_files = {
 
 output_csv = "training_data_iot.csv"
 
-import math # ADD THIS TO THE TOP OF YOUR FILE
+import math 
 
 # --- STATE TRACKERS FOR CONTEXT FEATURES ---
 ip_history = {}
 port_history = {}
-byte_history = {} # NEW: Tracks bytes per second
+byte_history = {} #      Tracks bytes per second
 
 def reset_state():
     global ip_history, port_history, byte_history
@@ -101,6 +101,7 @@ def extract_consistent_features(packet, label):
         
         # Protocol Context
         "is_well_known_port": 0,
+        #These are IoT protocols. If an attacker modbus and mqtt
         "is_modbus": 0, "is_mqtt": 0, "is_http": 0, "is_dns": 0,
         
         # Behavioral/Statistical Flow Features
